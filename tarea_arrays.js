@@ -6,7 +6,7 @@ function procesarPedido(pedido) {
     let nombrecliente = pedido.shift();//quitar el primer elemento
     pedido.unshift("bebida");//agregar al inicio
     pedido.push(nombrecliente); //agregar ek nombre del cliente al final
-    cosole.log(pedido);   
+    console.log(pedido);   
 }
 
 // 2. Iteración de Arrays en Javascript
@@ -14,7 +14,7 @@ function procesarPedido(pedido) {
 // Debes iterar sobre el array, sumar todos los números pares y devolver la suma.
 function sumarPares(numeros) {
     let suma = 0 //aca se va a guardar los numeros que sean par
-    for (i=0; i<numeros.length;i++){
+    for ( let i=0; i<numeros.length;i++){
         if (numeros[i] % 2 ===0){
             suma=suma + numeros[i]
         }
@@ -26,14 +26,13 @@ function sumarPares(numeros) {
 // 3.1 Escribe una función llamada `palabrasTerminanConA` que reciba un array de palabras
 // y devuelva `true` si todas terminan con "a", o `false` si al menos una no lo hace.
 function palabrasTerminanConA(palabras) {
-    for (i=0; i<palabras.length;i++){
+    for (let i=0; i<palabras.length;i++){
         if(!palabras[i].endsWith("a")){
             return false;
-        }else{
-            return true;
+            }   
         }
+        return true; 
     }
-}
 
 const palabras = ['casa', 'silla', 'mesa']
 console.log(palabrasTerminanConA(palabras)) // -> true
